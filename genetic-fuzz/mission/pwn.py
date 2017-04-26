@@ -3,10 +3,7 @@
 import hashlib
 
 def xor(s1, s2):
-    res = ""
-    for i in range(len(s1)):
-        res += chr(ord(s1[i]) ^ ord(s2[i]))
-    return res
+    return "".join([chr(ord(s1[i]) ^ ord(s2[i])) for i in range(len(s1))])
 
 def main():
     findme = '76fb930fd0dbc6cba6cf5bd85005a92a'.decode('hex')
